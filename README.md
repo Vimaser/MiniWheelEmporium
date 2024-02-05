@@ -1,70 +1,108 @@
-# Getting Started with Create React App
+# MiniWheelEmporium
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Website Layout and Design
+Home Page -
 
-## Available Scripts
+Navigation Bar: Include a search bar, category dropdowns, user account options, and cart icon.
+Main Banner: Rotating carousel of banners for promotions or featured categories.
+Featured Categories: Highlight key categories like "Toy Cars", "Action Figures", etc.
+Deals of the Day: Section for daily deals or discounts.
+Recommended Products: Personalized recommendations based on user browsing history.
 
-In the project directory, you can run:
+Product Listing Page -
 
-### `npm start`
+Advanced Filters: Allow users to filter by age, brand, price range, customer ratings, etc.
+Sort Options: Sort by relevance, price, new arrivals, and customer reviews.
+Product Cards: Display product image, name, price, ratings, and prime availability.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Product Detail Page -
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Multiple Images and Zoom-In Feature: Show different angles and details of the product.
+Product Description: Comprehensive details, including dimensions, age appropriateness, safety information.
+Customer Reviews and Ratings: Section for user reviews with sorting and filtering capabilities.
+Related Products: Show similar or complementary products.
 
-### `npm test`
+Cart and Checkout - 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Cart Summary: Review selected items with options to modify quantity or remove items.
+Checkout Process: Simplified, multi-step checkout with guest checkout option.
+Payment Integration: Secure payment gateway with multiple payment options.
 
-### `npm run build`
+User Account Area -
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Order History: Display past orders with status and tracking.
+Wish List: Allow users to save favorite items for later.
+Account Settings: Manage personal information, addresses, and payment methods.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Key Features
 
-### `npm run eject`
+Responsive and Intuitive Design: Ensure the website is fully responsive and easy to navigate.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Search Functionality with Autocomplete: Powerful search bar with suggestions and autocomplete.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+High Performance and Scalability: Optimize for speed and handle high traffic volumes.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Secure User Authentication and Authorization: Implement robust user login systems.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Analytics and Personalization: Use data to offer personalized product recommendations.
 
-## Learn More
+Robust Backend Infrastructure: Consider cloud services for hosting, database management, and scalability.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+SEO and Marketing Tools: Implement SEO best practices and integrate marketing tools for campaigns and promotions.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Customer Support Features: Include live chat, FAQs, and support ticket systems.
 
-### Code Splitting
+Mobile App: Consider developing a mobile app for a more comprehensive user experience.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
+# Development Approach
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Agile Methodology: Adopt an iterative approach, starting with a minimum viable product (MVP) and gradually adding features based on user feedback.
 
-### Making a Progressive Web App
+User-Centric Design: Regularly gather user feedback through surveys, usability tests, and analytics.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Continuous Integration/Continuous Deployment (CI/CD): Implement CI/CD for efficient development and deployment cycles.
 
-### Advanced Configuration
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Development Checklist
 
-### Deployment
+- Project Initialization:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Ensure your project environment is set up with React, Firebase, Netlify, and Stripe.
+Initialize a Git repository for version control.
 
-### `npm run build` fails to minify
+- Design and Planning:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Finalize wireframes and designs for your key pages (Home, Product Listings, Product Details, Cart, Checkout).
+Plan the database schema for products, users, orders, etc.
+
+- Backend Setup:
+
+Configure Firebase for authentication, database, and hosting.
+Set up security rules and database structure in Firebase.
+
+- Frontend Development:
+
+Start building your React components based on the designs.
+Implement routing with react-router-dom.
+Connect your frontend with Firebase for data retrieval and user authentication.
+
+- Payment Integration:
+
+Integrate Stripe for handling payments.
+
+- Testing:
+
+Write unit and integration tests for your components and backend functionality.
+Conduct manual testing to ensure everything works as expected.
+
+- Deployment:
+
+Deploy your initial version on Netlify.
+Set up continuous deployment for ease of updates.
+
+- Post-Deployment:
+
+Monitor the website’s performance.
+Collect user feedback for future improvements.
