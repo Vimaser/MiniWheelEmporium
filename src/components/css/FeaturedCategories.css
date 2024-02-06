@@ -1,0 +1,37 @@
+/* Style for the container of the categories */
+.featured-categories {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+    gap: 10px;
+}
+
+/* Style for each individual category tile */
+.category-tile {
+    flex: 0 0 auto; /* Flex item doesn't grow, doesn't shrink and bases its size on its content */
+    width: 200px; /* Adjust as needed */
+    border: 1px solid #ddd; /* Just for visual separation, can be adjusted */
+    border-radius: 5px;
+    overflow: hidden;
+    margin-right: 10px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category-tile img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensures no extra space at the bottom of the image */
+}
+
+.category-tile h3 {
+    margin: 10px 0;
+}
+
+.category-tile p {
+    padding: 0 10px 10px;
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+}

@@ -1,7 +1,8 @@
 import './App.css';
 import { 
   Header,
-  HeroSection
+  HeroSection,
+  FeaturedCategories
 } from "./components";
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div className="App">
       <Header />
       <HeroSection />
+      <FeaturedCategories />
     </div>
   );
 }

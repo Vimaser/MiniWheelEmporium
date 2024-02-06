@@ -127,13 +127,15 @@ Collect user feedback for future improvements.
 - Promotional Text/CTAs (Call to Action): Text overlay on the banner that prompts users to explore products or current promotions.
 - Navigation Arrows (for Carousel): On each side, if using a carousel to showcase multiple images.
 
-**DONE**
+
 
 3. Featured Categories
 
 - Category Tiles: Represent different toy categories with engaging images.
 - Titles/Descriptions: Brief title or description on each tile.
 - Layout: Grid or horizontally scrollable layout works well.
+
+**DONE**
 
 4. Popular Products
 
@@ -223,3 +225,34 @@ Racing Red
 #D42F41
 
 ... It's the Hotwheels color scheme-- sue me, actually no please don't >_>;
+
+# Database Structure
+
+Detailed Structure:
+
+1. Products Collection:
+
+Each document represents a single product.
+Fields: id, name, description, price, category, images (array of image URLs), ratings, brand, ageRange, dimensions, etc.
+
+2. Users Collection:
+
+Each document corresponds to a user.
+Fields: userId, name, email, address, orderHistory (array of order IDs or subcollection), wishlist (array of product IDs), etc.
+
+3. Orders Collection:
+
+Each document is an order placed by a user.
+Fields: orderId, userId, products (array of product IDs with quantities), totalPrice, orderDate, shippingAddress, status (e.g., shipped, delivered), etc.
+
+4. Categories Collection:
+
+Each document represents a product category.
+Fields: categoryId, name, description, image.
+
+5. Reviews Collection:
+
+Each document is a review for a product.
+Fields: reviewId, productId, userId, rating, comment, date.
+
+***DONE***
