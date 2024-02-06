@@ -106,3 +106,120 @@ Set up continuous deployment for ease of updates.
 
 Monitor the website’s performance.
 Collect user feedback for future improvements.
+
+# Order of Wireframe Development
+
+**DONE**
+
+1. Header Component 
+
+- Logo: Place it on the top left for brand recognition.
+- Navigation Menu: Horizontally aligned. Include links like "Home," "Shop," "Categories," "About Us," "Contact."
+- Search Bar: Either in the center or towards the right.
+- Cart Icon: Top right corner, possibly with a small indicator of the number of items in the cart.
+- User Account Icon/Login: Next to the cart icon, for easy access to user profiles or login.
+
+
+
+2. Hero Section
+
+- Large Banner/Carousel: Occupies a significant portion of the upper fold. Should be visually striking and engaging.
+- Promotional Text/CTAs (Call to Action): Text overlay on the banner that prompts users to explore products or current promotions.
+- Navigation Arrows (for Carousel): On each side, if using a carousel to showcase multiple images.
+
+**DONE**
+
+3. Featured Categories
+
+- Category Tiles: Represent different toy categories with engaging images.
+- Titles/Descriptions: Brief title or description on each tile.
+- Layout: Grid or horizontally scrollable layout works well.
+
+4. Popular Products
+
+- Product Cards: Display each product with an image, name, price, and quick "Add to Cart" button.
+- Consistent Grid Layout: To keep it organized and easy to browse.
+- Section Title: Something like "Best Sellers" or "Popular Now."
+
+5. Footer
+
+- Informational Links: Include "About Us," "Contact," "Privacy Policy," "Terms of Service."
+- Social Media Icons: Links to your business's social media profiles.
+- Newsletter Sign-up: Optional, if you plan to have email marketing.
+- Contact Details: Quick access to customer service contact information.
+
+6. Home Page
+
+- Start with Home.js.
+- Implement the Hero Section with a large banner or carousel showcasing featured products or promotions.
+- Add sections for Featured Categories and Popular Products.
+- Integrate the Header and Footer components.
+
+7. Product Listing Page
+
+- Develop a Products.js page.
+- Implement functionality to list products. You might start with dummy data before integrating with Firebase.
+- Include options for filtering and sorting products.
+
+8. Product Detail Page
+
+- Create a ProductDetail.js component.
+- This page should show detailed information about a single product, including images, descriptions, price, and an "Add to Cart" button.
+
+9. Shopping Cart
+
+- Develop a Cart.js component.
+- Implement functionality to view items in the cart, update quantities, remove items, and proceed to checkout.
+ 
+10. Checkout Page
+
+- Create a Checkout.js component.
+- Design the layout to include forms for billing, shipping, and payment information.
+- Integrate Stripe for payment processing.
+
+11. User Authentication
+
+- Implement user authentication using Firebase. This includes Login.js and Register.js components.
+- Ensure users can sign up, log in, and log out.
+
+12. User Profile
+
+- Develop a user profile section where users can view their order history and manage their account settings.
+
+13. Connect with Firebase
+
+- Connect your components with Firebase to fetch real data (products, user info, orders).
+- Implement CRUD (Create, Read, Update, Delete) operations for products (if you plan to have an admin panel).
+
+13. Responsive Design
+
+- Ensure that all your components and pages are responsive and work well on various devices and screen sizes.
+
+14. Testing
+
+- Regularly test your application for bugs and usability issues.
+- Test both frontend functionality and backend integration.
+
+15. Deployment
+
+- Once MVP is working, deploy site on Netlify.
+- Set up continuous deployment for easy updates.
+
+
+# Dev Notes
+
+HexCode for color scheme is going to be...
+
+Racing Blue
+#2C84C7 
+
+Petty Blue
+#4251AE
+
+Racing Yellow
+#F1D74D
+
+Racing Red
+#D42F41
+
+... It's the Hotwheels color scheme-- sue me, actually no please don't >_>;
