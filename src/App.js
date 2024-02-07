@@ -1,16 +1,12 @@
 import './App.css';
 import { 
-  Header,
-  HeroSection,
-  FeaturedCategories
+  Home
 } from "./components";
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <HeroSection />
-      <FeaturedCategories />
+      <Home />
     </div>
   );
 }

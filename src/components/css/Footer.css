@@ -1,0 +1,27 @@
+.site-footer {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-links a,
+.social-media a {
+    margin: 0 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.newsletter-signup form {
+    margin-top: 20px;
+}
+
+.newsletter-signup input[type=email] {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-details p {
+    margin: 10px 0;
+}

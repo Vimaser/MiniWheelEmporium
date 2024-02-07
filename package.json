@@ -1,6 +1,6 @@
 {
   "name": "miniwheelemporium",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "private": true,
   "dependencies": {
     "@react-google-maps/api": "^2.19.2",

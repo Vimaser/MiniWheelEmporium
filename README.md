@@ -135,13 +135,15 @@ Collect user feedback for future improvements.
 - Titles/Descriptions: Brief title or description on each tile.
 - Layout: Grid or horizontally scrollable layout works well.
 
-**DONE**
+
 
 4. Popular Products
 
 - Product Cards: Display each product with an image, name, price, and quick "Add to Cart" button.
 - Consistent Grid Layout: To keep it organized and easy to browse.
 - Section Title: Something like "Best Sellers" or "Popular Now."
+
+
 
 5. Footer
 
@@ -150,12 +152,18 @@ Collect user feedback for future improvements.
 - Newsletter Sign-up: Optional, if you plan to have email marketing.
 - Contact Details: Quick access to customer service contact information.
 
+
+
+
+
 6. Home Page
 
 - Start with Home.js.
 - Implement the Hero Section with a large banner or carousel showcasing featured products or promotions.
 - Add sections for Featured Categories and Popular Products.
 - Integrate the Header and Footer components.
+
+**DONE**
 
 7. Product Listing Page
 
