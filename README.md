@@ -154,8 +154,6 @@ Collect user feedback for future improvements.
 
 
 
-
-
 6. Home Page
 
 - Start with Home.js.
@@ -163,7 +161,7 @@ Collect user feedback for future improvements.
 - Add sections for Featured Categories and Popular Products.
 - Integrate the Header and Footer components.
 
-**DONE**
+
 
 7. Product Listing Page
 
@@ -171,10 +169,14 @@ Collect user feedback for future improvements.
 - Implement functionality to list products. You might start with dummy data before integrating with Firebase.
 - Include options for filtering and sorting products.
 
+
+
 8. Product Detail Page
 
 - Create a ProductDetail.js component.
 - This page should show detailed information about a single product, including images, descriptions, price, and an "Add to Cart" button.
+
+**DONE**
 
 9. Shopping Cart
 
@@ -187,7 +189,7 @@ Collect user feedback for future improvements.
 - Design the layout to include forms for billing, shipping, and payment information.
 - Integrate Stripe for payment processing.
 
-11. User Authentication
+11. User Authentication  **CURRENTLY WORKING ON DEV NOTE: THIS NEEDS TO BE FINISHED FIRST BECAUSE ALL OTHER COMPONENTS WILL BE USING AUTH**
 
 - Implement user authentication using Firebase. This includes Login.js and Register.js components.
 - Ensure users can sign up, log in, and log out.
@@ -197,6 +199,17 @@ Collect user feedback for future improvements.
 - Develop a user profile section where users can view their order history and manage their account settings.
 
 13. Connect with Firebase
+
+ ** Devnote: I've been doing this in between coding. I still need to set up the rules for firestore db. Below is code I haven't utilized yet for testing **
+
+```JSON
+// I know it's based on common expression language see I read the docs!
+
+match /Users/{userId} {
+  allow read, write: if request.auth != null && request.auth.uid == userId;
+}
+
+```
 
 - Connect your components with Firebase to fetch real data (products, user info, orders).
 - Implement CRUD (Create, Read, Update, Delete) operations for products (if you plan to have an admin panel).

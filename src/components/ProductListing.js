@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import ProductCard from "./ProductCard";
 import "./css/ProductListing.css";
@@ -9,18 +10,27 @@ const ProductListing = () => {
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedBrand, setSelectedBrand] = useState("");
   const [sortCriteria, setSortCriteria] = useState("");
-  // Add more filter states as needed
+  const navigate = useNavigate();
+
+  const handleProductClick = (docId) => {
+    navigate(`/product/${docId}`);
+  };
+  
+  
 
   useEffect(() => {
     const fetchProductsAndCategories = async () => {
       const db = getFirestore();
       // Fetch products
-      const productsCol = collection(db, "products");
+      const productsCol = collection(db, "Products");
       const productSnapshot = await getDocs(productsCol);
-      const productList = productSnapshot.docs.map((doc) => doc.data());
+      const productList = productSnapshot.docs.map((doc) => ({
+        docId: doc.id,
+        ...doc.data()
+      }));
       setProducts(productList);
       // Fetch categories
-      const categoriesCol = collection(db, "categories");
+      const categoriesCol = collection(db, "Categories");
       const categorySnapshot = await getDocs(categoriesCol);
       const categoryList = categorySnapshot.docs.map((doc) => doc.data());
       setCategories(categoryList);
@@ -86,9 +96,15 @@ const ProductListing = () => {
       </div>
       <div className="products-grid">
         {sortProducts(filterProducts()).map((product) => (
-          <ProductCard key={product.id} product={product} />
+          <ProductCard 
+            key={product.docId} 
+            product={product} 
+            onClick={() => handleProductClick(product.docId)}
+          />
         ))}
       </div>
+      <button onClick={() => navigate('/product/testId')}>Test Navigate</button>
+
     </div>
   );
 };

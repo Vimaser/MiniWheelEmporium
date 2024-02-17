@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { FaUserCircle } from "react-icons/fa";
 import img from "../img/logo.png";
 import "./css/Header.css";
 
 function Header() {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const auth = getAuth();
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setIsLoggedIn(!!user);
+    });
+
+    return unsubscribe;
+  }, []);
+
   return (
     <header>
       <div className="logo">
@@ -11,7 +23,19 @@ function Header() {
       </div>
       <div className="user-account">
         <FaUserCircle size={30} />
-        <a href="/login">Login</a>
+        {isLoggedIn ? (
+          <>
+            <a href="/logout">Logout</a>
+            {/* Add user's name or profile link if needed */}
+          </>
+        ) : (
+          <>
+            <a href="/login">Login</a>
+            <p className="register-prompt">
+              Don't have an account? <a href="/register">Register now!</a>
+            </p>
+          </>
+        )}
         {/* Replace the above with user account icon or name when logged in */}
       </div>
       <div className="cart-icon">

@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/ProductCard.css";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ product, onClick }) => {
   const renderStarRating = (rating) => {
     let stars = [];
     for (let i = 0; i < 5; i++) {
@@ -15,7 +15,7 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="product-card">
+    <div className="product-card" onClick={onClick}>
       <img
         src={product.images[0]}
         alt={product.name}
