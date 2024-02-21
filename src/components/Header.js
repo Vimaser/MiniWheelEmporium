@@ -39,7 +39,7 @@ function Header() {
         {/* Replace the above with user account icon or name when logged in */}
       </div>
       <div className="cart-icon">
-        <a href="/cart">Cart</a>
+        <a href="/shoppingcart">Cart</a>
       </div>
       <div className="navigation">
         <ul>

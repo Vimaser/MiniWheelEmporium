@@ -1,22 +1,21 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { getFirestore, collection, getDocs } from "firebase/firestore";
 import ProductCard from "./ProductCard";
+import { useCart } from "../CartContext";
 import "./css/ProductListing.css";
 
-const ProductListing = () => {
+const ProductListing = ({ onAddToCart }) => {
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [selectedBrand, setSelectedBrand] = useState("");
   const [sortCriteria, setSortCriteria] = useState("");
   const navigate = useNavigate();
-
+  const { handleAddToCart } = useCart();
   const handleProductClick = (docId) => {
     navigate(`/product/${docId}`);
   };
-  
-  
 
   useEffect(() => {
     const fetchProductsAndCategories = async () => {
@@ -26,7 +25,7 @@ const ProductListing = () => {
       const productSnapshot = await getDocs(productsCol);
       const productList = productSnapshot.docs.map((doc) => ({
         docId: doc.id,
-        ...doc.data()
+        ...doc.data(),
       }));
       setProducts(productList);
       // Fetch categories
@@ -81,9 +80,7 @@ const ProductListing = () => {
         </select>
 
         <select onChange={(e) => setSelectedBrand(e.target.value)}>
-          {/* Assuming you have a list of brands */}
           <option value="">All Brands</option>
-          {/* Map through the brands here */}
         </select>
 
         <select onChange={(e) => setSortCriteria(e.target.value)}>
@@ -96,15 +93,15 @@ const ProductListing = () => {
       </div>
       <div className="products-grid">
         {sortProducts(filterProducts()).map((product) => (
-          <ProductCard 
-            key={product.docId} 
-            product={product} 
+          <ProductCard
+            key={product.docId}
+            product={product}
             onClick={() => handleProductClick(product.docId)}
+            onAddToCart={handleAddToCart}
           />
         ))}
       </div>
-      <button onClick={() => navigate('/product/testId')}>Test Navigate</button>
-
+      <button onClick={() => navigate("/product/testId")}>Test Navigate</button>
     </div>
   );
 };

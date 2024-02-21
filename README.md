@@ -182,6 +182,12 @@ Collect user feedback for future improvements.
 
 - Develop a Cart.js component.
 - Implement functionality to view items in the cart, update quantities, remove items, and proceed to checkout.
+
+// Working on the Shopping cart. Passing the prop etc.
+// Done, ran into some issues parsing, inifinteloop, all that fun stuff
+// It's fixed, but still testing. Went with a cartcontext to save state. 
+// Still need to refactor some code and remove redudant code.
+// Won't move to done till Checkout page implimenation is done and further testing.
  
 10. Checkout Page
 

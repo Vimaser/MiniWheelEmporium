@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { getFirestore, doc, getDoc } from "firebase/firestore";
 import submitRating from "./SubmitRating";
-import StarRating from './StarRating';
+import StarRating from "./StarRating";
+import { useCart } from "../CartContext";
 
 const ProductDetail = ({ userId }) => {
   const [product, setProduct] = useState(null);
   const { docId } = useParams();
   const navigate = useNavigate();
+  const { handleAddToCart } = useCart();
 
   useEffect(() => {
     const fetchProduct = async () => {
@@ -38,6 +40,11 @@ const ProductDetail = ({ userId }) => {
   const handleBackButtonClick = () => {
     navigate("/productlisting");
   };
+
+  /*   const handleAddToCart = (e) => {
+    e.stopPropagation();
+    onAddToCart(product);
+  }; */
 
   if (!product) {
     return <div>Loading...</div>;
@@ -71,7 +78,13 @@ const ProductDetail = ({ userId }) => {
         <strong>Ratings:</strong> {product.ratings}
       </p>
       <StarRating onRatingSubmit={handleRatingSubmit} productId={docId} />
-      <button className="add-to-cart-button">Add to Cart</button>
+      <button
+        className="add-to-cart-button"
+        onClick={() => handleAddToCart(product)}
+      >
+        Add to Cart
+      </button>
+
       <a href="#more-options" className="more-options-link">
         More Buying Choices
       </a>

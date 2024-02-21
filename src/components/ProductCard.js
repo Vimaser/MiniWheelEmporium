@@ -1,7 +1,10 @@
 import React from "react";
 import "./css/ProductCard.css";
+import { useCart } from "../CartContext";
 
 const ProductCard = ({ product, onClick }) => {
+  const { handleAddToCart } = useCart();
+
   const renderStarRating = (rating) => {
     let stars = [];
     for (let i = 0; i < 5; i++) {
@@ -13,6 +16,12 @@ const ProductCard = ({ product, onClick }) => {
     }
     return stars;
   };
+
+  /*   const handleAddToCart = (e) => {
+    e.stopPropagation();
+    console.log("Adding to cart:", product);
+    onAddToCart(product);
+  }; */
 
   return (
     <div className="product-card" onClick={onClick}>
@@ -34,13 +43,18 @@ const ProductCard = ({ product, onClick }) => {
         <span className="ratings-count">({product.reviewCount} reviews)</span>
       </div>
       <ul className="product-features">
-        {/* List key features. Ensure that the product object contains this data */}
         {product.features &&
           product.features.map((feature, index) => (
             <li key={index}>{feature}</li>
           ))}
       </ul>
-      <button className="add-to-cart-button">Add to Cart</button>
+      <button
+        className="add-to-cart-button"
+        onClick={() => handleAddToCart(product)}
+      >
+        Add to Cart
+      </button>
+
       <a href="#more-options" className="more-options-link">
         More Buying Choices
       </a>
